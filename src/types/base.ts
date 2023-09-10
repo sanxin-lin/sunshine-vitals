@@ -10,7 +10,7 @@ export interface LayoutShiftAttribution {
   currentRect: DOMRectReadOnly;
 }
 
-export interface LayoutShift extends PerformanceEntry {
+export interface ILayoutShift extends PerformanceEntry {
   value: number;
   sources: LayoutShiftAttribution[];
   hadRecentInput: boolean;
@@ -78,7 +78,7 @@ export interface Metric {
    */
   entries: (
     | PerformanceEntry
-    | LayoutShift
+    | ILayoutShift
     | FirstInputPolyfillEntry
     | NavigationTimingPolyfillEntry
   )[];
@@ -107,7 +107,7 @@ export interface Metric {
 export interface IPerformanceEntryMap {
   'event': PerformanceEventTiming[];
   'paint': PerformancePaintTiming[];
-  'layout-shift': LayoutShift[];
+  'layout-shift': ILayoutShift[];
   'largest-contentful-paint': LargestContentfulPaint[];
   'first-input': PerformanceEventTiming[] | FirstInputPolyfillEntry[];
   'navigation': PerformanceNavigationTiming[] | NavigationTimingPolyfillEntry[];

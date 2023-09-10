@@ -1,5 +1,8 @@
-import { LayoutShift, Metric } from './base';
+import { ILayoutShift, Metric } from './base';
 export interface CLSMetric extends Metric {
     name: 'CLS';
-    entries: LayoutShift[];
+    entries: ILayoutShift[];
+}
+export interface CLSReportCallback {
+    (metric: CLSMetric): void;
 }
