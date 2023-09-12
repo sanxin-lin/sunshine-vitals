@@ -83,3 +83,7 @@ export interface ReportOpts {
     reportAllChanges?: boolean;
     durationThreshold?: number;
 }
+export interface IPerformanceEventTiming extends PerformanceEntry {
+    duration: DOMHighResTimeStamp;
+    interactionId?: number;
+}

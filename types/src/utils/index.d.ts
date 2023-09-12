@@ -9,3 +9,4 @@ export * from './uniqueID';
 export * from './activated';
 export * from './observe';
 export * from './runOnce';
+export * from './interaction';
